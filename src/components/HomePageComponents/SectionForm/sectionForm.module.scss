@@ -1,0 +1,70 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.section-title{
+  color: #0F1C49;
+  font-size: 50px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 16px;
+
+}
+.section-subtitle{
+  max-width: 470px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $Oxygen-Regular;
+  color: #878DA4;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-form{
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .form-input:first-child{
+    width: 100%;
+  }
+  .form-input:last-child{
+    width: 100% !important;
+  }
+
+
+  .form-input{
+    width: 50%;
+    padding: 0 10px;
+    @include mediaWidth_600{
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+      border: 1px solid #787D88;
+      font-family: $Oxygen-Regular;
+      padding-left: 24px;
+      padding-top: 14px;
+      font-size: 16px;
+      background: #F7F6F5;
+      color: #878DA4;
+      height: 111px !important;
+    }
+    input{
+      color: #878DA4;
+      background: #F7F6F5;
+      font-family: $Oxygen-Regular;
+      font-size: 16px;
+      height: 56px;
+      width: 100%;
+      padding-left: 24px;
+      border: 1px solid #787D88;
+      margin-bottom: 16px;
+    }
+  }
+
+}

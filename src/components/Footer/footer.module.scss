@@ -1,0 +1,19 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.footer{
+  background: #0C488E;
+  .flex-styles{
+    justify-content: space-between;
+    @include mediaWidth_992{
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+  .last-p{
+    font-family: $Oxygen-Regular;
+    font-size: 13px;
+    line-height: 24px;
+  }
+}

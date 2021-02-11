@@ -1,0 +1,63 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.flex-styles{
+  justify-content: space-between;
+  @include mediaWidth_1025{
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  .social-card{
+    padding: 73px 94px;
+    max-width: 338px;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.06);
+    @include mediaWidth_1417{
+      padding: 33px 54px;
+    }
+    @include mediaWidth_700{
+      padding: 33px 54px !important;
+    }
+    @include mediaWidth_1025{
+      margin-bottom: 30px;
+    }
+
+    img{
+      max-width: 150px;
+      margin-bottom: 14px;
+    }
+    h4{
+      text-align: center;
+      font-family: $PlayfairDisplay-Bold;
+      font-size: 20px;
+      line-height: 28px;
+      color: #0F1C49;
+    }
+  }
+
+}
+
+.section-title{
+  color: #0F1C49;
+  font-size: 50px;
+  line-height: 48px;
+  text-align: center;
+  margin-bottom: 16px;
+
+}
+
+ .section-subtitle{
+  max-width: 530px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $Oxygen-Regular;
+  color: #878DA4;
+  font-size: 16px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,41 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+.contacts-footer{
+  max-width: 280px;
+  .social-media{
+    margin-bottom: 25px;
+    a{
+      color: #fff;
+      font-size: 20px;
+    }
+
+    li:not(:last-child){
+      margin-right: 42px;
+    }
+
+    li:first-child{
+      margin-left: 20px;
+    }
+  }
+
+  a{
+    font-family: $Rubik-Bold;
+    color: rgba(255, 255, 255, 60%);
+    font-size: 16px;
+    line-height: 18px;
+  }
+  .location{
+    margin-bottom: 23px;
+  }
+
+  .location,
+  .phone-and-email{
+    img{
+      margin-right: 5px;
+    }
+    display: flex;
+    align-items: flex-start;
+  }
+  .phone-and-email{}
+}

@@ -1,0 +1,252 @@
+/* Mixins:
+  ========================================================================== */
+
+// px to rem
+@function rem($pixels, $context: $mainFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+// size to one line
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// placeholder helper
+@mixin placeholder {
+  ::-webkit-input-placeholder {
+    @content;
+  }
+
+  :-moz-placeholder {
+    @content;
+  }
+
+  ::-moz-placeholder {
+    @content;
+  }
+
+  :-ms-input-placeholder {
+    @content;
+  }
+}
+
+/* Fonts Helpers:
+   Read more: https://github.com/vedees/webpack-template/blob/master/README.md#add-fonts
+   ========================================================================== */
+
+/*
+  By default templates support only modern format fonts
+  Without svg. Only: .woff, .woffs
+  if ypu need svg comments lines bellow and uncomments "Fonts helper all format fonts"
+
+  Usage:
+    1. Put your font to `src/assets/fonts/FOLDERNAME/FONTNAME`
+      FOLLOW: Files Required
+      Example: .woff, .woffs formats
+    2. Go to fonts.scss
+    3. Use mixon
+      Example: @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+
+    Required parameters: @family, @family
+    Minor parameters: @weight, @style, @pipeline
+
+    Example Base:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensans");
+    Example Situation:
+      @include font-face("OpenSans", "../fonts/OpenSans/opensansItalic", 400, italic);
+*/
+
+// Default: For modern format fonts
+// Files Required: .woff, .woffs
+
+@mixin font-face($font-family,
+  $file-path,
+  $weight: normal,
+  $style: normal,
+  $asset-pipeline: false) {
+  @font-face {
+    font-family: $font-family;
+    font-weight: $weight;
+    font-style: $style;
+
+    src: url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.woff2') format('woff2');
+  }
+}
+
+// For Modern format fonts + .svg
+// Files Required: .woff, .woffs, .svg
+
+// @mixin font-face(
+//   $font-family,
+//   $file-path,
+//   $weight: normal,
+//   $style: normal,
+//   $asset-pipeline: false
+// ) {
+//   @font-face {
+//     font-family: $font-family;
+//     font-weight: $weight;
+//     font-style: $style;
+
+//     src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+//       url("#{$file-path}.woff") format("woff"),
+//       url("#{$file-path}.woff2") format("woff2"),
+//       url("#{$file-path}.svg") format("svg"),
+//       url("#{$file-path}.ttf") format("truetype");
+//   }
+// }
+
+// For Modern format fonts + .svg
+// Files Required: eot. .woff, .woffs, .svg, .ttf
+
+// @mixin font-face(
+//   $font-family,
+//   $file-path,
+//   $weight: normal,
+//   $style: normal,
+//   $asset-pipeline: false
+// ) {
+//   @font-face {
+//     font-family: $font-family;
+//     font-weight: $weight;
+//     font-style: $style;
+//     src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+//       url("#{$file-path}.woff") format("woff"),
+//       url("#{$file-path}.woff2") format("woff2"),
+//       url("#{$file-path}.svg") format("svg"),
+//       url("#{$file-path}.ttf") format("truetype");
+//   }
+// }
+
+@mixin mediaWidth_1824 {
+  @media screen and (max-width: 1824px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_1640 {
+  @media screen and (max-width: 1640px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_1417 {
+  @media screen and (max-width: 1417px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_1366 {
+  @media screen and (max-width: 1366px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_1224 {
+  @media screen and (max-width: 1224px) {
+    @content
+  }
+}
+
+;
+
+
+
+
+@mixin mediaWidth_min_1025 {
+  @media screen and (min-width: 1025px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_1025 {
+  @media screen and (max-width: 1025px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_992 {
+  @media screen and (max-width: 992px) {
+    @content
+  }
+}
+
+;@mixin mediaWidth_900 {
+  @media screen and (max-width: 992px) {
+    @content
+  }
+}
+
+;
+
+
+@mixin mediaWidth_767 {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+;@mixin mediaWidth_770 {
+  @media screen and (max-width: 767px) {
+    @content
+  }
+}
+
+;
+@mixin mediaWidth_700 {
+  @media screen and (max-width: 700px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_624 {
+  @media screen and (max-width: 624px) {
+    @content
+  }
+}
+
+;
+
+@mixin mediaWidth_600 {
+  @media screen and (max-width: 600px) {
+    @content
+  }
+}
+
+;
+@mixin mediaWidth_480 {
+  @media screen and (max-width: 480px) {
+    @content
+  }
+};
+
+
+@mixin mediaWidth_424 {
+  @media screen and (max-width: 424px) {
+    @content
+  }
+}

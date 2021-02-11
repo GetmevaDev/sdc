@@ -5,46 +5,67 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 
-import Header from "./header"
-import "./layout.css"
+import Header from "./Header/header"
+import Footer from "./Footer/footer"
+import classes from "./Header/header.module.scss"
+import reactStringReplace from "react-string-replace"
+import NavMenuButton from "./Header/NavigationMenu/NavMenu"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
+
+  const menu = useStaticQuery(graphql`
+      {
+          strapiNvigationMenu {
+              Header_Menu {
+                  Name_Page
+                  Link_Page
+                  id
+              }
+          }
       }
-    }
   `)
 
+
+
+
+  const headerMenu = menu.strapiNvigationMenu.Header_Menu;
+  const [activeMenu, setActiveMenu] = useState(false)
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+    <div style={{
+      width: '100vw',
+      height: '100vh',
+      overflow: !activeMenu ? 'auto' : 'hidden',
+    }}>
+      <Header func={() => setActiveMenu(!activeMenu)}>
+
+        <nav className={classes.navMenu} style={{
+          transform: `translateX(${activeMenu ? '0' : '-100%'})`,
+          transition: `.3s`,
+        }}>
+          <div className={`container row ${classes.listPage_navMenu}`}>
+            <ul >
+              {
+                headerMenu ?
+                  headerMenu.map(li => (
+                    <li key={li.id}>
+                      <Link to={li.Link_Page}>{reactStringReplace(li.Name_Page, '&', (match, i)=>(
+                        <span>&</span>
+                      ))   }</Link>
+                    </li>
+                  )) : null
+              }
+            </ul>
+
+          </div>
+        </nav>
+      </Header>
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
-    </>
+      <Footer />
+    </div>
   )
 }
 

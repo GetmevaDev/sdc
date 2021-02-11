@@ -5,85 +5,92 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
-import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { Location } from "@reach/router"
 
-function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
-    graphql`
-      query {
-        site {
-          siteMetadata {
-            title
-            description
-            author
+function SEO({ seo, location }) {
+  const common = useStaticQuery(graphql`
+      {
+          strapiCommonMetaData {
+              OG_Locale
+              OG_Site_Name
+              OG_Type
           }
-        }
       }
-    `
-  )
+  `)
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      htmlAttributes={{ lang: "en" }}
+      title={seo !== undefined ? seo.Title : ""}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: seo !== undefined ? seo.Description : "",
         },
         {
           property: `og:title`,
-          content: title,
+          content: seo !== undefined ? seo.Title : "",
+        },
+        {
+          property: `og:locale`,
+          content: common.strapiCommonMetaData.OG_Locale,
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: seo !== undefined ? seo.Description : "",
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: common.strapiCommonMetaData.OG_Type,
+        },
+        {
+          property: `og:site_name`,
+          content: common.strapiCommonMetaData.OG_Site_Name,
+        },
+        {
+          property: `og:url`,
+          content: location.href,
+        },
+        {
+          property: `og:image`,
+          content: seo !== undefined ? seo.Image_Url : "",
+        },
+        {
+          property: `og:image:secure_url`,
+          content: seo !== undefined ? seo.Image_Url : "",
+        },
+        {
+          property: `og:image:width`,
+          content: seo !== undefined ? seo.Image_Width : "",
+        },
+        {
+          property: `og:image:height`,
+          content: seo !== undefined ? seo.Image_Height : "",
         },
         {
           name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: seo !== undefined ? seo.Title : "",
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: seo !== undefined ? seo.Description : "",
         },
-      ].concat(meta)}
-    />
+      ]}
+    >
+
+    </Helmet>
   )
 }
 
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  description: ``,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
-}
-
-export default SEO
+export default props => (
+  <Location>{locationProps => <SEO {...locationProps} {...props} />}</Location>
+)

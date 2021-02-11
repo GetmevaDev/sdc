@@ -1,0 +1,41 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.flex-styles{
+  justify-content: space-between;
+  @include mediaWidth_992{
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+  }
+  h4{
+    font-family: $PlayfairDisplay-Bold;
+    font-size: 30px;
+    line-height: 28px;
+    color: #0F1C49;
+    margin-bottom: 25px;
+  }
+  ul{
+    @include mediaWidth_992{
+      margin-bottom: 30px;
+    }
+    li{
+      font-family: $Oxygen-Regular;
+      font-size: 16px;
+      line-height: 48px;
+      color: #787D88;
+      .dot{
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #0C488E;
+        margin-right: 15px;
+      }
+
+    }
+    .listStile{
+      align-items: center;
+    }
+  }
+}

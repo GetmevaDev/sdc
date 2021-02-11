@@ -1,0 +1,48 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+a{
+  display: block;
+  color: #fff;
+  @include mediaWidth_700{
+    display: inline-block;
+    padding: 10px 0 !important;
+  }
+}
+
+.number:first-child{
+  font-family: $Oxygen-Regular !important;
+  font-size: 17px;
+  line-height: 21.47px;
+  letter-spacing: 2px;
+  margin-bottom: 7px;
+  @include mediaWidth_700{
+    margin-bottom: 0;
+  }
+}
+
+.link:last-child{
+  font-size: 14px;
+  line-height: 18.66px;
+  padding: 7px 10px;
+  border: 1px solid #fff;
+  @include mediaWidth_700{
+    border: 0;
+    font-size: 18px;
+  }
+}
+
+.contact{
+  @include mediaWidth_700{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    background: #0c488e;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-around;
+
+  }
+}

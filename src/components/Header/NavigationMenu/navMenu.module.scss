@@ -1,0 +1,35 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+
+
+.button-menu{
+  background: transparent;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: $PlayfairDisplay-Bold;
+  font-size: 20px;
+  line-height: 26px;
+  line-height: 26px;
+  padding-top: 13px;
+  padding-bottom: 16px;
+  padding-left: 30px;
+  padding-right: 20px;
+  border: 1px solid #fff;
+  cursor: pointer;
+  @include mediaWidth_700{
+    font-size: 15px;
+
+  }
+  img{
+    margin-left: 18px;
+  }
+}
+
+.navMenu{
+  position: absolute !important;
+  width: 100%;
+  top: 100%;
+  left: 0;
+}

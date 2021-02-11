@@ -1,0 +1,116 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+
+.adaptive{
+  @include mediaWidth_992{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.section-our-services{
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  @include mediaWidth_992{
+    background-position-x: 15.4% !important;
+  }
+  .title-services{
+    flex-grow: 1;
+    @include mediaWidth_992{
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    h2{
+      font-size: 80px;
+      line-height: 48px;
+      color: #fff;
+      margin-bottom: 40px;
+      @include mediaWidth_1025{
+        font-size: 5vmax;
+      }
+    }
+    h3{
+      font-size: 40px;
+      line-height: 28px;
+      color: #fff;
+      margin-bottom: 41px;
+      @include mediaWidth_1025{
+        font-size: 4vmax;
+      }
+    }
+    .all-services{
+      display: inline-block;
+      font-size: 22px;
+      line-height: 29px;
+      padding: 24px 31px;
+      border: 1px solid #fff;
+      @include mediaWidth_700{
+        width: 100%;
+      }
+    }
+  }
+
+  .services-cards{
+    flex-wrap: wrap;
+    max-width: 570px;
+    margin-top: -200px;
+    margin-bottom: -200px;
+    @include mediaWidth_992{
+      justify-content: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .services-card{
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    color: #fff;
+    max-width: 270px;
+    text-align: center;
+    padding: 50px 32px;
+    border: 1px solid #0C488E;
+
+    &:not(:nth-child(even)){
+      margin-right: 30px;
+    }
+
+    &:not(:nth-last-of-type(-n+2)){
+      margin-bottom: 55px;
+    }
+    @include mediaWidth_600{
+
+      margin: 0 !important;
+      margin-bottom: 10px !important;
+    }
+    img{
+      max-width: 124px;
+      max-height: 80px;
+      margin-bottom: 20px;
+    }
+      h4{
+        text-align: center;
+        color: #0F1C49;
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 12px;
+      }
+    span{
+      font-family: $Oxygen-Regular;
+      color: #878DA4;
+      font-size: 14px;
+      line-height: 28px;
+      margin-bottom: 13px;
+    }
+    a{
+      color: #0C488E;
+      font-size: 16px;
+      line-height: 21px;
+    }
+  }
+}

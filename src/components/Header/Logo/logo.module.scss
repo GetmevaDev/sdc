@@ -1,0 +1,15 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.logo-link{
+  display: inline-block;
+  max-width: 256px;
+  max-height: 63px;
+  @include mediaWidth_700{
+    max-width: 155px;
+  }
+  img{
+    max-width: 100%;
+  }
+}

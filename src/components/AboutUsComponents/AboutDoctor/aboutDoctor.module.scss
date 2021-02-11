@@ -1,0 +1,17 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.flex-styles{
+  justify-content: space-between;
+}
+
+.textContainer{
+  padding-left: 30px;
+  h4{
+    font-size: 30px;
+    line-height: 28px;
+    color: #0F1C49;
+    margin-bottom: 25px;
+  }
+}

@@ -1,22 +1,41 @@
 import React from "react"
-import { Link } from "gatsby"
+import {graphql, Link } from "gatsby"
+import "../scss/main.scss"
 
 import Layout from "../components/layout"
+import SectionHeader from "../components/HomePageComponents/SectionHeader/SectionHeader"
+import SectionDescription from "../components/HomePageComponents/SectionDescription/SectionDescription"
 import Image from "../components/image"
 import SEO from "../components/seo"
+import SectionOurServices from "../components/HomePageComponents/SectionOurServices/SectionOurServices"
+import SectionComments from "../components/HomePageComponents/SectionComments/SectonComments"
+import SectionNewSpecial from "../components/HomePageComponents/SectionNewSpecial/NewSpecial"
+import SectionBookAnAppointment from "../components/HomePageComponents/SectionBookAnAppointment/SectionBookAnAppointment"
+import SectionForm from "../components/HomePageComponents/SectionForm/SectionForm"
 
-const IndexPage = () => (
+
+const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
+      <SEO seo={data.strapiHomePage.SEO_Home_Page} />
+    <SectionHeader />
+    <SectionDescription />
+    <SectionOurServices />
+    <SectionComments />
+    <SectionNewSpecial />
+    <SectionBookAnAppointment />
+    <SectionForm />
   </Layout>
 )
 
 export default IndexPage
+export const query = graphql`
+    {
+        strapiHomePage {
+            SEO_Home_Page {
+                Title
+                Image_Url
+                Description
+            }
+        }
+    }
+`

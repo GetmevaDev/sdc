@@ -1,0 +1,19 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+.section-header-title{
+  font-family: $PlayfairDisplay-Black;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 75px;
+  line-height: 79px;
+  @include mediaWidth_480{
+    font-size: 55px;
+  }
+}
+
+.back-home-link{
+  color: #08B3E3;
+  font-size: 20px;
+  line-height: 28px;
+}

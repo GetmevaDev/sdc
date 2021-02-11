@@ -1,0 +1,37 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.section-an-appointment{
+  background: #08B4E4;
+  .flex-styles{
+    justify-content: space-around;
+    align-items: center;
+    @include mediaWidth_992{
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  h2{
+    font-family: $PlayfairDisplay-Black;
+    font-size: 60px;
+    line-height: 58px;
+    color: #fff;
+    max-width: 630px;
+    @include mediaWidth_767{
+      margin-bottom: 40px;
+    }
+    @include mediaWidth_480{
+      font-size: 5vmax;
+      line-height: 5vmax;
+    }
+  }
+  a{
+    padding: 27px 42px;
+    border: 1px solid #fff;
+    @include mediaWidth_767{
+      text-align: center;
+      width: 100%;
+    }
+  }
+}
