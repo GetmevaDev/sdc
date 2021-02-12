@@ -24,6 +24,7 @@
 .list-page_nav-menu{
   height: calc(100vh - 120.133px);
   align-items: center;
+  overflow-y: scroll;
   ul{
     border-left: 5px solid #08B3E3;
     padding-left: 39px;
@@ -36,9 +37,31 @@
     display: inline-block;
 
   }
+  .nav-link:nth-child(3){
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-link:nth-child(3):hover{
+    .second-link{
+      height: auto;
+      overflow: auto;
+      margin-top: 20px;
+      transition: .3s ease-in-out;
+    }
+  }
+  .second-link{
+    transition: .3s ease-in-out;
+      font-size: 22px;
+      line-height: 29px;
+      height: 0;padding: 0 !important;
+
+      overflow: hidden;
+  }
   a{
     font-size: 40px;
     line-height: 40px;
+
     @include mediaWidth_1366{
       font-size: 30px;
       line-height: 20px;
