@@ -61,14 +61,23 @@ const Layout = ({ children }) => {
                       <Link to={li.Link_Page}>{reactStringReplace(li.Name_Page, '&', (match, i)=>(
                         <span>&</span>
 
-                      ))}</Link>{console.log(li)}
+                      ))}</Link>
 
-                      {
-                        li.Submenu && li.Submenu.length > 0 ?
-                          li.Submenu.map(item =>(
-                            <Link className={classes.secondLink} to={item.Link}>{item.Name_Submenu}</Link>
-                          )) : null
-                      }
+                        {
+                          li.Submenu && li.Submenu.length > 0 ? (
+                            <ul className={classes.submenuList}>
+                              {
+                                li.Submenu.map(item =>(
+                                  <li><Link className={classes.secondLink} to={item.Link}>{item.Name_Submenu}</Link></li>
+                                ))
+                              }
+                            </ul>
+                            ) : null
+
+                        }
+
+
+
                     </li>
                   )) : null
               }

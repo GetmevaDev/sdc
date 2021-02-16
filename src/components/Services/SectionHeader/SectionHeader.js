@@ -9,7 +9,9 @@ export default function SectionHeader({ title, background }){
 
   return(
     <section className={classesHomePage.sectionHeader} style={{
-      background: `#98a3c4 url("${background}")`
+      background: `#98a3c4 url("${background && background !== null ?
+        background : null
+      }")`
     }}>
       <div className={`container row ${classesHomePage.justifyContent}`} style={{
         height: `100%`,
