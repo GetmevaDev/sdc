@@ -13,9 +13,10 @@ export default function HTML(props) {
       />
       {props.headComponents}
     </head>
-    <body style={{overflowX: `hidden`}} {...props.bodyAttributes}>
+    <body  {...props.bodyAttributes}>
     {props.preBodyComponents}
     <div
+      style={{overflowX: `hidden`}}
       key={`body`}
       id="___gatsby"
       dangerouslySetInnerHTML={{ __html: props.body }}
