@@ -18,6 +18,16 @@
   padding-right: 20px;
   border: 1px solid #fff;
   cursor: pointer;
+  img{
+    right: 0;
+    transition: .3s;
+  }
+  &:hover{
+    img{
+      right: -7px;
+    }
+  }
+
   @include mediaWidth_700{
     font-size: 15px;
 

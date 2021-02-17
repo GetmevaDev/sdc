@@ -29,6 +29,11 @@
   a{
     padding: 27px 42px;
     border: 1px solid #fff;
+    transition: .3s;
+    &:hover{
+      background: #7DD2EA;
+      transition: .3s;
+    }
     @include mediaWidth_767{
       text-align: center;
       width: 100%;

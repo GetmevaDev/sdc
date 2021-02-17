@@ -7,7 +7,8 @@ a{
   color: #fff;
   @include mediaWidth_700{
     display: inline-block;
-    padding: 10px 0 !important;
+    padding: 10px 10px !important;
+    text-transform: uppercase;
   }
 }
 
@@ -17,7 +18,26 @@ a{
   line-height: 21.47px;
   letter-spacing: 2px;
   margin-bottom: 7px;
+  span:last-child{
+    display: none;
+  }
   @include mediaWidth_700{
+    background: #fff;
+    flex-grow: 1;
+    color: #0C488E;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    span:first-child{
+      display: none;
+    }
+    span:last-child{
+      display: block;
+      img{
+        width: 26px;
+        margin-right: 15px;
+      }
+    }
     margin-bottom: 0;
   }
 }
@@ -29,7 +49,8 @@ a{
   border: 1px solid #fff;
   @include mediaWidth_700{
     border: 0;
-    font-size: 18px;
+
+    font-size: 14px;
   }
 }
 

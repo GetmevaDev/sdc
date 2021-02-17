@@ -46,11 +46,17 @@
     a{
       display: inline;
       font-size: 40px;
+      @include mediaWidth_700{
+        font-size: 30px;
+      }
     }
-@include mediaWidth_1366{
-  margin-bottom: 18px;
+      @include mediaWidth_1366{
+        margin-bottom: 18px;
 
-}
+      }
+    @include mediaWidth_700{
+      margin-bottom: 25px;
+    }
 
   }
 

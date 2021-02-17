@@ -113,6 +113,20 @@ p {
   padding: 24px 31px;
   background: #0C488E;
   color: #fff;
+  border: 1px solid #0C488E;
+  transition: .7s;
+  img{
+    right: 0;
+    transition: .3s;
+  }
+  &:hover{
+    background: #fff;
+    color: #0C488E;
+    transition: .7s;
+    img{
+      right: -30px;
+    }
+  }
   @include mediaWidth_700{
     width: 100%;
     text-align: center;
