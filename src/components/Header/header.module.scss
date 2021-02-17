@@ -9,8 +9,9 @@
   top: 100%;
   left: 0;
   background: #171717;
-  opacity: 0.9;
+  opacity: 0.6;
   z-index: 10;
+
 }
 
 .row-reverse{
@@ -26,6 +27,7 @@
 .list-page_nav-menu{
   height: calc(100vh - 120.133px);
   align-items: flex-start;
+  z-index: 11;
   ul{
     width: 100%;
     border-left: 5px solid #08B3E3;

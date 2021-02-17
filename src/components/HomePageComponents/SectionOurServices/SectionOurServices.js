@@ -1,12 +1,17 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {graphql, useStaticQuery, Link} from "gatsby"
 import Arrow from "../../../images/Arrow 1.svg"
 
-
 import classes from "./sectionOurServices.module.scss"
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 
 export default function SectionOurServices(){
+
+  useEffect(() => {
+    Aos.init({duration: 400})
+  },[])
 
   const sectionOurServices = useStaticQuery(graphql`
       {
@@ -19,9 +24,9 @@ export default function SectionOurServices(){
                       alternativeText
                   }
               }
-          }
+          } 
           ourServices:  allStrapiServices(skip: 1, limit: 4) {
-              nodes {
+              nodes {   
                   Background_Section_Header {
                       Icon {
                           alternativeText
@@ -46,7 +51,7 @@ export default function SectionOurServices(){
   const subtitle = sectionOurServices.strapiHomePage.Section_Our_Services.Subtitle;
 
   return(
-    <section className={classes.sectionOurServices} style={{
+    <section data-aos-delay="1000" data-aos="fade-up" className={classes.sectionOurServices} style={{
       background: `url("${background}")`,
       marginBottom: 145,
     }}>

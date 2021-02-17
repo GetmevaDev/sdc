@@ -1,11 +1,16 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import ReactMarkdown from "react-markdown"
 
 import classes from "./sectionDescriptio.module.scss"
-
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function SectionDescription(){
+
+  useEffect(() => {
+    Aos.init({duration: 400})
+  },[])
 
   const description = useStaticQuery(graphql`
       {
@@ -28,14 +33,14 @@ export default function SectionDescription(){
     <>
     {
       description.strapiHomePage ? (
-        <section className={classes.sectionDescription} >
+        <section  className={classes.sectionDescription} >
           <div className={`row mw1640 ${classes.flexStyles}`}>
             <div className={classes.imageDescription}>
-              <img src={description.strapiHomePage.Description.Image[0].url} alt={description.strapiHomePage.Description.Image[0].alternativeText} />
+              <img data-aos-delay="1000" data-aos="fade-up" src={description.strapiHomePage.Description.Image[0].url} alt={description.strapiHomePage.Description.Image[0].alternativeText} />
             </div>
             {
               description.strapiHomePage.Description && description.strapiHomePage.Description !== null ? (
-                  <div className={classes.textContainer}>
+                  <div data-aos-delay="1000" data-aos="fade-left" className={classes.textContainer}>
                     <h2>{description.strapiHomePage.Description.Title}</h2>
                     <h3>{description.strapiHomePage.Description.Subtitle}</h3>
                     <ReactMarkdown

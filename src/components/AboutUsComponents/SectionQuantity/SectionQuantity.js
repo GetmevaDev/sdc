@@ -33,7 +33,7 @@ export default function SectionQuantity(){
     }}>
 
       <div className={`container row ${classes.flexStyle}`}>
-        <div className={`block-items row ${classes.blockItems_flexStyle}`}>
+        <div data-aos-delay="1000" data-aos="fade-up" className={`block-items row ${classes.blockItems_flexStyle}`}>
           <div className={classes.blockImage}>
             <img
               src={Image1}
@@ -46,7 +46,7 @@ export default function SectionQuantity(){
           </div>
 
         </div>
-        <div className={`block-items row ${classes.blockItems_flexStyle}`}>
+        <div data-aos-delay="1300" data-aos="fade-up" className={`block-items row ${classes.blockItems_flexStyle}`}>
           <div className={classes.blockImage}>
             <img
               src={Image2}
@@ -59,7 +59,7 @@ export default function SectionQuantity(){
           </div>
 
         </div>
-        <div className={`block-items row ${classes.blockItems_flexStyle}`}>
+        <div data-aos-delay="1600" data-aos="fade-up" className={`block-items row ${classes.blockItems_flexStyle}`}>
           <div className={classes.blockImage}>
             <img
               src={Image3}
@@ -73,7 +73,7 @@ export default function SectionQuantity(){
           </div>
 
         </div>
-        <div className={`block-items row ${classes.blockItems_flexStyle}`}>
+        <div data-aos-delay="1900" data-aos="fade-up" className={`block-items row ${classes.blockItems_flexStyle}`}>
           <div className={classes.blockImage}>
             <img
               src={Image4}

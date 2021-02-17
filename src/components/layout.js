@@ -13,7 +13,6 @@ import Header from "./Header/header"
 import Footer from "./Footer/footer"
 import classes from "./Header/header.module.scss"
 import reactStringReplace from "react-string-replace"
-import NavMenuButton from "./Header/NavigationMenu/NavMenu"
 
 const Layout = ({ children }) => {
 
@@ -40,17 +39,27 @@ const Layout = ({ children }) => {
   const headerMenu = menu.strapiNvigationMenu.Header_Menu;
   const [activeMenu, setActiveMenu] = useState(false)
   return (
-    <div style={{
-      width: '100vw',
-      height: '100vh',
-      overflow: !activeMenu ? 'auto' : 'hidden',
-    }}>
-      <Header func={() => setActiveMenu(!activeMenu)}>
+<>
 
+      <Header func={() => setActiveMenu(!activeMenu)}>
+        <div
+          style={{
+            transform: `translateX(${activeMenu ? '0' : '-100%'})`,
+            transition: `.3s`,
+          }}
+          className="block-animation-1"></div>
+
+        <div
+          style={{
+            transform: `translateX(${activeMenu ? '0' : '-100%'})`,
+            transition: `.7s`,
+          }}
+          className="block-animation-2"></div>
         <nav className={classes.navMenu} style={{
           transform: `translateX(${activeMenu ? '0' : '-100%'})`,
-          transition: `.3s`,
+          transition: `1s`,
         }}>
+
           <div className={`container row ${classes.listPage_navMenu}`}>
             <ul >
 
@@ -60,9 +69,7 @@ const Layout = ({ children }) => {
                     <li className={classes.navLink} key={li.id}>
                       <Link to={li.Link_Page}>{reactStringReplace(li.Name_Page, '&', (match, i)=>(
                         <span>&</span>
-
                       ))}</Link>
-
                         {
                           li.Submenu && li.Submenu.length > 0 ? (
                             <ul className={classes.submenuList}>
@@ -88,7 +95,8 @@ const Layout = ({ children }) => {
       </Header>
         <main>{children}</main>
       <Footer />
-    </div>
+
+</>
   )
 }
 

@@ -33,7 +33,7 @@ export default function SectionHeader(){
         alignItems: `flex-end`,
       }}>
 
-        <h2 className={classes.sectionHeaderTitle}>{title}</h2>
+        <h2 data-aos-delay="600" data-aos="fade-left" className={classes.sectionHeaderTitle}>{title}</h2>
         <Link className={classes.backHomeLink} to={`/`}><img src={ArrowLeft} alt="" /> Back home</Link>
       </div>
     </section>

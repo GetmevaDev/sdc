@@ -1,9 +1,13 @@
-import React from "react"
+import React, {useEffect} from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import classes from "./sectionHeader.module.scss"
-
+import Aos from "aos"
+import "aos/dist/aos.css"
 
 export default function SectionHeader(){
+  useEffect(() => {
+    Aos.init({duration: 700})
+  },[])
 
   const sectionHeader = useStaticQuery(graphql`
       {
@@ -36,8 +40,8 @@ export default function SectionHeader(){
         {
           title && subtitle ? (
             <>
-              <h2 className={classes.sectionHeader_title}>{title}</h2>
-              <h3 className={classes.sectionHeader_subtitle}>{subtitle}</h3>
+              <h2 data-aos-delay="1000" data-aos="fade-left" className={classes.sectionHeader_title}>{title}</h2>
+              <h3 data-aos-delay="1200" data-aos="fade-left" className={classes.sectionHeader_subtitle}>{subtitle}</h3>
 
               </>
           ) : null

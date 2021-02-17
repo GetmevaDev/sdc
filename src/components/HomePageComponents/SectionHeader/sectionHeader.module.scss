@@ -11,7 +11,9 @@
   background-repeat: no-repeat !important;
   background-size: cover !important;
   height: calc(100vh - 120.133px);
+  margin-top: 120.133px;
 @include mediaWidth_700{
+  margin-top: 78px;
   background-position-x: -170px !important;
 }
 

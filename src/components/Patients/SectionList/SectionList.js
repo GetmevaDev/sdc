@@ -28,18 +28,19 @@ export default function SectionList(){
   return(
     <>
       {
-        data.strapiNewPatients.List.map(elem =>(
+        data.strapiNewPatients.List.map((elem,i) =>(
           <section className={classes.sectionBeforeAfter} >
             <div className={`row mw1640 ${classes.flexStyles} `}>
               <div className={classesSectionDescription.imageDescription}>
                 <img
+                  data-aos-delay={1 + i + '00' } data-aos="fade-up"
                   src={elem.Image[0].url}
                   alt={elem.Image[0].alternativeText}
                 />
               </div>
               {
                 elem && elem !== null ? (
-                  <div className={classesSectionDescription.textContainer}>
+                  <div data-aos-delay={1 + i + '00' } data-aos="fade-up" className={classesSectionDescription.textContainer}>
                     <h2>{elem.Title}</h2>
                     <ReactMarkdown
                       source={elem.Text}

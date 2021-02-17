@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import {graphql, useStaticQuery, Link} from "gatsby"
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
@@ -14,8 +14,14 @@ import classes from "./sectionCommens.module.scss"
 
 import Arrow from "../../../images/Arrow 1.svg"
 import ImagePhoto from "../../../images/Group2353546457.png"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
 
 export default function  SectionComments (){
+  useEffect(() => {
+    Aos.init({duration: 400})
+  },[])
 
   SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -54,12 +60,14 @@ export default function  SectionComments (){
               <div className={`row row-reverse mw1640 ${classesSectionDescription.flexStyles}`}>
                 <div className={classesSectionDescription.imageDescription} >
                   <img
+                    data-aos-delay="1000"
+                    data-aos="fade-up"
                     src={SectionComment.homPageElement.Section_Comments.Image[0].url}
                     alt={SectionComment.homPageElement.Section_Comments.Image[0].alternativeText}
                   />
                 </div>
 
-                <div className={classesSectionDescription.textContainer} >
+                <div data-aos-delay="1000" data-aos="fade-right" className={classesSectionDescription.textContainer} >
                   <div className="hidden" style={{overflow: "hidden", paddingBottom: 50}}>
                     <h2>{SectionComment.homPageElement.Section_Comments.Title}</h2>
                     <h3>{SectionComment.homPageElement.Section_Comments.Subtitle}</h3>
