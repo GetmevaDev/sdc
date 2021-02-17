@@ -46,7 +46,7 @@ class SectionForm extends React.Component{
       }}>
         <div className="container">
           <h2 className={classes.sectionTitle}>{this.props.title || 'Feel free to contact us'}</h2>
-          <span className={classes.sectionSubtitle}>{this.props.subtitle ||'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.'}</span>
+          <span className={classes.sectionSubtitle}>{this.props.subtitle ||'Please fill out the form below or use our contact information provided.'}</span>
 
           <form className={classes.contactForm}>
             <div className={classes.formInput}>
