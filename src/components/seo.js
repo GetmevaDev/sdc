@@ -25,7 +25,7 @@ function SEO({ seo, location }) {
 
   return (
     <Helmet
-      htmlAttributes={{ lang: "en" }}
+      htmlAttributes={{ lang: "en", prefix: `og: http://ogp.me/ns#` }}
       title={seo !== undefined ? seo.Title : ""}
       meta={[
         {
@@ -58,7 +58,7 @@ function SEO({ seo, location }) {
         },
         {
           property: `og:image`,
-          content: seo !== undefined ? seo.Image_Url : "",
+          content: seo !== undefined && seo.Image_Url !== null ? seo.Image_Url : "",
         },
         {
           property: `og:image:secure_url`,

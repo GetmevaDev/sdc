@@ -13,7 +13,8 @@ const Services = ({ data }) =>{
 
   return(
     <Layout>
-      <SEO seo={data.strapiServices.SEO_Blog_Page} />
+      <SEO seo={data.strapiServices.SEO_Services} />
+      {console.log(data)}
         <SectionHeader
         title={data.strapiServices.Title}
         background={data.strapiServices.Background_Section_Header.Background.length !== 0 ?
