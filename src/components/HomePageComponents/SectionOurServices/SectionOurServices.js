@@ -39,6 +39,11 @@ export default function SectionOurServices(){
                   id
               }
           }
+          firstServices: allStrapiServices {
+              nodes {
+                  slug
+              }
+          }
       }
   `)
 
@@ -67,7 +72,7 @@ export default function SectionOurServices(){
             <h3>{subtitle}</h3>
           ) : null}
 
-            <Link className={classes.allServices} to={`/`}>All services <img src={Arrow} alt="" /></Link>
+            <Link className={classes.allServices} to={sectionOurServices.firstServices.nodes[0].slug}>All services <img src={Arrow} alt="" /></Link>
         </div>
 
         <div className={`${classes.servicesCards} row`}>
