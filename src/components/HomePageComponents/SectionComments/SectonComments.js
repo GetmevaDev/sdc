@@ -102,7 +102,7 @@ export default function  SectionComments (){
 
 
                   </div>
-                  <Link className={`link`} to={`#`}>More review <img src={Arrow} alt="" /></Link>
+                  <Link className={`link`} to={`/reviews`}>More review <img src={Arrow} alt="" /></Link>
                 </div>
 
 
