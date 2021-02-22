@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import classes from "./sectionListPosts.module.scss"
 import Image from "../../../images/Group2353546457.png"
 import Loupe from "../../../images/loupe (1) 1.svg"
-import Note from "../../../images/note 1.svg"
+
 
 
 

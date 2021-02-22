@@ -12,10 +12,6 @@ export default function SectionComments(){
                   node {
                       Name
                       Comment
-                      Photo {
-                          alternativeText
-                          url
-                      }
                   }
               }
           }
@@ -34,9 +30,9 @@ export default function SectionComments(){
               <div className={`${classes.cardComment} demo-box-${i}`}>
                 <div className={`${classes.nameAndPhoto} row`}>
                   <img
-                    src={comment.node.Photo.length === 0 ?
+                    src={comment.node.Photo === undefined  ?
                       ImagePhoto : comment.node.Photo[0].url}
-                    alt={comment.node.Photo.length === 0 ?
+                    alt={comment.node.Photo === undefined  ?
                        'Photo' : comment.node.Photo[0].alternativeText} />
                   <div className="name">
                     <h4>{comment.node.Name}</h4>

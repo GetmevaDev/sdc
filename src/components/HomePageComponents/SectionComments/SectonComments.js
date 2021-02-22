@@ -42,10 +42,7 @@ export default function  SectionComments (){
                   node {
                       Name
                       Comment
-                      Photo {
-                          alternativeText
-                          url
-                      }
+                      
                   }
               }
           }
@@ -88,9 +85,9 @@ export default function  SectionComments (){
                             }}>
                               <img
                                 className={classes.photoPatient}
-                                src={comment.node.Photo.length === 0 ?
+                                src={comment.node.Photo === undefined ?
                                   ImagePhoto : comment.node.Photo[0].url}
-                                alt={comment.node.Photo.length === 0 ?
+                                alt={comment.node.Photo === undefined ?
                                   'Photo' : comment.node.Photo[0].alternativeText} />
                               <h4 className={classes.name}>{comment.node.Name}</h4>
                             </div>
