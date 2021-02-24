@@ -9,7 +9,13 @@ import ContactFooter from "./ContactFooter/ContactFooter"
 
 export default function Footer(){
 
-
+  const data = useStaticQuery(graphql`
+      {
+          strapiContacts {
+              Footer_lost_text
+          }
+      }
+  `)
 
   return(
     <footer className={classes.footer}>
@@ -28,7 +34,7 @@ export default function Footer(){
         paddingTop: 16,
         paddingBottom: 16,
         color: `#fff`
-      }}>2020 Smile Design Center of Westchester, ALL RIGHTS RESERVED.</p>
+      }}>{data.strapiContacts.Footer_lost_text}</p>
     </footer>
   )
 }

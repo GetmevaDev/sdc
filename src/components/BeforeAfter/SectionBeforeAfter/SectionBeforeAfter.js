@@ -38,8 +38,8 @@ export default function SectionNewSpecial(){
               <div className={classesSectionDescription.imageDescription}>
                 <img
                   data-aos-delay="1000" data-aos="fade-up"
-                  src={elem.Image[0].url}
-                  alt={elem.Image[0].alternativeText}
+                  src={elem.Image.length !== 0 ? elem.Image[0].url : null}
+                  alt={elem.Image.length !== 0 ? elem.Image[0].alternativeText : ""}
                 />
               </div>
               {
