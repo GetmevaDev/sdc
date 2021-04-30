@@ -28,7 +28,7 @@ export default function SectionContent({ post, recentPosts, shortText }){
                 </div>
                 <p className={classes.text}>{ shortText ?  post.Text.substring(0,247).concat('...') : post.Text}</p>
                 <div className={`${classes.categoryAndLink} row`}>
-                  <span><img src={Note} alt="" />{post.category_post.Name_Category}</span>
+                  <span><img src={Note} alt="" />{post.category_article.Name_Category}</span>
                 </div>
               </div>
             </div>
