@@ -3,9 +3,9 @@
 
 
 .section-an-appointment{
-  background: #08B4E4;
+  background: #787D88;
   .flex-styles{
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     @include mediaWidth_992{
       flex-wrap: wrap;
@@ -26,17 +26,6 @@
       line-height: 5vmax;
     }
   }
-  a{
-    padding: 27px 42px;
-    border: 1px solid #fff;
-    transition: .3s;
-    &:hover{
-      background: #7DD2EA;
-      transition: .3s;
-    }
-    @include mediaWidth_767{
-      text-align: center;
-      width: 100%;
-    }
-  }
+
+
 }

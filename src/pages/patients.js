@@ -23,7 +23,7 @@ const Patients = ({ data }) =>{
   )
 }
 
-
+// `common-meta-data`,
 export default Patients
 export const dataPatient = graphql`
     {

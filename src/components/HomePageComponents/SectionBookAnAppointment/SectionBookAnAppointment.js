@@ -1,28 +1,46 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import classes from "./sectionBookAnAppointment.module.scss"
-
-
-
+import sectionHeaderClasses from "../SectionHeader/sectionHeader.module.scss"
+import Arrow from "../../../images/Arrow 1.svg"
 
 
 export default function SectionBookAnAppointment(){
 
 
-  const link = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
       {
           strapiContacts {
-              Book_An_Appointment
+              Background_Book_An_Appointment{
+                url 
+              }
+          }
+          links: strapiHomePage {
+              Section_Header {
+                  Links {
+                      id
+                      Link
+                      Name_Link
+                  }
+              }
           }
       }
   `)
 
     return(
-      <section className={classes.sectionAnAppointment}>
+      <section style={{
+        background: `#787D88 url("${data.strapiContacts.Background_Book_An_Appointment[0].url}") center no-repeat`,
+        backgroundSize: `cover`,
+      }} className={classes.sectionAnAppointment}>
         <div className={`container row ${classes.flexStyles}`}>
-            <h2>Call or Email to book
-              an appointment today!</h2>
-          <a href={link.strapiContacts.Book_An_Appointment}>Book An Appointment</a>
+          {
+              data.links.Section_Header.Links.map(item => (
+                <a key={item.id} className={sectionHeaderClasses.link} href={item.Link}>
+                  {item.Name_Link}
+                  <img src={Arrow} alt="" />
+                </a>
+              ))
+          }
         </div>
       </section>
     )

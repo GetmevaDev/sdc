@@ -1,9 +1,9 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
-import LogoFooter from "./LogoFooter/LogoFooter"
+import SocialMediaFooter from "./SocialMediaFooter/SocialMediaFooter"
 import classes from "./footer.module.scss"
-import BlockCareCredit from "./BlockCareCredit/BlockCareCredit"
 import ContactFooter from "./ContactFooter/ContactFooter"
+import LogoFooter from "./LogoFooter/LogoFooter"
 
 
 
@@ -23,13 +23,13 @@ export default function Footer(){
         paddingTop: 100,
         paddingBottom: 100
       }}>
+        <SocialMediaFooter />
         <LogoFooter />
-        <BlockCareCredit />
         <ContactFooter />
       </div>
       <p className={classes.lastP} style={{
         textAlign: `center`,
-        background: `#093F7D`,
+        background: `#212121`,
         marginBottom: 0,
         paddingTop: 16,
         paddingBottom: 16,

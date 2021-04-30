@@ -17,7 +17,6 @@ export default function SectionDescription(){
           strapiHomePage {
               Description {
                   Title
-                  Subtitle
                   Text
                   Image {
                       url
@@ -42,7 +41,6 @@ export default function SectionDescription(){
               description.strapiHomePage.Description && description.strapiHomePage.Description !== null ? (
                   <div data-aos-delay="1000" data-aos="fade-left" className={classes.textContainer}>
                     <h2>{description.strapiHomePage.Description.Title}</h2>
-                    <h3>{description.strapiHomePage.Description.Subtitle}</h3>
                     <ReactMarkdown
                       source={description.strapiHomePage.Description.Text}
                     />

@@ -31,7 +31,7 @@ export default function SectionListPosts({ posts, author, recentPosts, shortText
                 <h3>{post.Title}</h3>
                 <div className="block-author row">
                   <img className={classes.imageIcon} src={Image} alt="" />
-                  <span className={classes.author}>Posted by <a href={author}>{author}</a> on <a href="">{post.createdAt}</a></span>
+                  <span className={classes.author}>Posted by <a href={post.author.username}>{post.author.username}</a> on <a href="">{post.createdAt}</a></span>
               </div>
                 <p className={classes.text}>{ shortText ?  post.Text.substring(0,247).concat('...') : post.Text}</p>
                 <div className={`${classes.categoryAndLink} row`}>

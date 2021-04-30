@@ -23,22 +23,19 @@ export default function ContactFooter(){
                   id
               }
           }
+          image: strapiLogo {
+              Site_Logo {
+                  alternativeText
+                  url
+              }
+              Text
+          }
       }
   `)
 
   return(
     <div className={classes.contactsFooter}>
-      <div className={classes.socialMedia}>
-        <ul className={`row`}>
-          {
-            data.strapiContacts.Social_Media.map(item => (
-              <li>
-                <a href={item.Link}><span className={`fa fa-${item.Name}`}></span></a>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
+
       <div className="contact-data">
         <div className={classes.location}>
           <img src={Clock} alt="" />

@@ -15,6 +15,7 @@
 }
 
 .row-reverse{
+  max-height: 120px;
   @include mediaWidth_700{
     flex-direction: row-reverse;
   }

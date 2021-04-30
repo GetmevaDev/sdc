@@ -14,7 +14,6 @@ const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
       if (result.errors) {
         reject(result.errors)
       }
-
       return result;
     })
   )
@@ -95,10 +94,34 @@ exports.createPages = ({ actions, graphql }) => {
       })
     })
   });
+
+  const getDigitalCaseSubmission = makeRequest(graphql, `
+      {
+          allStrapiDigitalCaseSubmissions {
+              edges {
+                  node {
+                      slug
+                  }
+              }
+          }
+      }
+  `).then(result => {
+    // Create pages for each article.
+    result.data.allStrapiDigitalCaseSubmissions.edges.forEach(({ node }) => {
+      createPage({
+        path: `/${node.slug}`,
+        component: path.resolve(`src/templates/digital-case-submission.js`),
+        context: {
+          slug: node.slug,
+        },
+      })
+    })
+  });
   // Query for articles nodes to use in creating pages.
   return Promise.all([
     getArticle,
     getServices,
     getAuthor,
+    getDigitalCaseSubmission,
   ])
 };

@@ -9,24 +9,30 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-          ? 'https://sdc-admin.herokuapp.com'
-          : 'http://localhost:1337',
+        ? 'https://cms-ikd.herokuapp.com'
+        : 'http://localhost:1337',
         queryLimit: 1000, // Default to 100
         contentTypes: [
           `users`,
           `services`,
           `comments`,
           `articles`,
+          `digital-case-submissions`,
+          `category-articles`,
         ],
         singleTypes: [
           `nvigation-menu`,
-          `contacts`, `logo`,
-          `home-page`, `rating`,
+          `contacts`,
+          `logo`,
+          `home-page`,
           `about-us-page`,
           `before-and-after`,
           `new-patients`,
           `reviews`,
           `blog-page`,
+          `request-a-pickup`,
+          `digital-case-submission-page`,
+          `navigation-studio-accepted`,
           `common-meta-data`,
         ],
       },

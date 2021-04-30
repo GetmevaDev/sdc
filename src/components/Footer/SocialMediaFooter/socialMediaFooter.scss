@@ -1,0 +1,18 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+
+
+.block-logo-footer{
+  max-width: 400px ;
+img{
+  max-width: 256px;
+}
+  p{
+    color: #fff !important;
+    font-family: $Oxygen-Regular;
+    font-size: 15px;
+    line-height: 19px;
+  }
+}

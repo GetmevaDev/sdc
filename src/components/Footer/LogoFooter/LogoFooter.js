@@ -3,7 +3,7 @@ import {graphql, useStaticQuery} from "gatsby"
 import classes from "./logoFooter.module.scss"
 
 
-export default function LogoFooter(){
+const LogoFooter = () =>{
 
   const data = useStaticQuery(graphql`
       {
@@ -12,15 +12,14 @@ export default function LogoFooter(){
                   alternativeText
                   url
               }
-              Text
           }
       }
   `)
-
   return(
-    <div className={classes.blockLogoFooter}>
+    <div className={classes.logoFooter}>
       <img src={data.strapiLogo.Site_Logo[0].url} alt={data.strapiLogo.Site_Logo[0].alternativeText} />
-      <p>{data.strapiLogo.Text}</p>
     </div>
   )
 }
+
+export default LogoFooter

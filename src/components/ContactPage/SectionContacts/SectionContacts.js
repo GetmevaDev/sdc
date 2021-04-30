@@ -14,7 +14,7 @@ export default function SectionContact(){
       {
           strapiContacts {
               Location {
-                  Text_Location
+                  Name_Location
                   Link
               }
               Work_Days {
@@ -32,14 +32,15 @@ export default function SectionContact(){
     <section style={{
       paddingBottom: 0,
       paddingTop: 0,
-      marginTop: -100
+      marginTop: -100,
+      zIndex: 16,
     }}>
       <div className={`container row ${classes.flexStyles}`}>
         <div className={classes.contactCard}>
           <div className={classes.imageIcon}>
             <img src={Map} alt="map" />
           </div>
-          <Link to={data.strapiContacts.Location.Link}>{data.strapiContacts.Location.Text_Location}</Link>
+          <Link to={data.strapiContacts.Location.Link}>{data.strapiContacts.Location.Name_Location}</Link>
         </div>
         <div className={classes.contactCard}>
           <div className={classes.imageIcon}>

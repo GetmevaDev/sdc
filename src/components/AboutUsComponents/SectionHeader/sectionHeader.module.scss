@@ -7,13 +7,15 @@
   color: #fff;
   font-size: 75px;
   line-height: 79px;
+  z-index: 17;
   @include mediaWidth_480{
     font-size: 55px;
   }
 }
 
 .back-home-link{
-  color: #08B3E3;
+  color: #EBBD62;
   font-size: 20px;
   line-height: 28px;
+  z-index: 16;
 }

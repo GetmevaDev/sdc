@@ -1,10 +1,10 @@
 import React from "react"
 import {graphql, useStaticQuery} from "gatsby"
 import classes from "./sectionQuantity.module.scss"
-import Image1 from "../../../images/Group12.png"
-import Image2 from "../../../images/Group13.png"
-import Image3 from "../../../images/toothache 1.png"
-import Image4 from "../../../images/instagram 2.png"
+import Image1 from "../../../images/Icon1.png"
+import Image2 from "../../../images/Icon2.png"
+import Image3 from "../../../images/Icon3.png"
+import Image4 from "../../../images/Icon4.png"
 
 
 

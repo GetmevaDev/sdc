@@ -40,25 +40,24 @@
 }
 .section-before-after:nth-child(3n+2) {
   &::before {
-    background: #08B3E3;
+    background: #EBBD62;
 
   }
 }
 .section-before-after:nth-child(3n+3) {
   &::before {
-    background: #0C488E;
+    background: #787D88;
 
   }
 }
 .section-before-after:nth-child(3n+1) {
   &::before {
-    background: #98A3C4;
+    background: #333333;
   }
 }
 
 .section-before-after:nth-child(odd) {
   &::before {
-
     right: 0 !important;
   }
 }

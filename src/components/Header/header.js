@@ -15,7 +15,7 @@ const Header = ( { children, func } ) => {
 
   return(
       <header className={`site-header`} style={{
-        background: `#0C488E`,
+        background: `#333333`,
       }}>
 
         <div className={`container row ${classes.rowReverse}`} style={{

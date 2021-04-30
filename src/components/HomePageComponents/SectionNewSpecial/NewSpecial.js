@@ -44,8 +44,6 @@ export default function SectionNewSpecial(){
                 source={data.strapiHomePage.Section_Special.Text}
               />
             </div>
-
-
           ) : null
         }
 

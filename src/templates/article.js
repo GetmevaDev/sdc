@@ -1,10 +1,9 @@
 import React from "react"
-import {graphql, useStaticQuery} from "gatsby"
+import {graphql} from "gatsby"
 import Layout from "../components/layout"
 import SectionHeader from "../components/Services/SectionHeader/SectionHeader"
 import SectionBookAnAppointment from "../components/HomePageComponents/SectionBookAnAppointment/SectionBookAnAppointment"
 import SectionForm from "../components/HomePageComponents/SectionForm/SectionForm"
-import SectionListPosts from "../components/BlogPage/SectionListPosts/SectionListPosts"
 import SectionContent from "../components/ArticlePage/SectionContent/SectionContent"
 import SEO from "../components/seo"
 
@@ -45,10 +44,10 @@ export const query = graphql`
                 alternativeText
                 url
             }
-            author {
-                username
+           author {
+               username
             }
-           category_post {
+           category_article {
                Name_Category
            }
         }

@@ -3,7 +3,11 @@ import {graphql, useStaticQuery, Link} from "gatsby"
 import classesHomePage from "../../HomePageComponents/SectionHeader/sectionHeader.module.scss"
 import classes from "./sectionHeader.module.scss"
 import ArrowLeft from "../../../images/Arrow-left.svg"
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Parallax, Autoplay  } from 'swiper';
+// Import Swiper styles
+import 'swiper/swiper.scss';
+import ImagePhoto from "../../../images/Group2353546457.png"
 
 export default function SectionHeader(){
 
@@ -21,11 +25,12 @@ export default function SectionHeader(){
 
   const title = sectionHeader.strapiAboutUsPage.Title;
 
-
+  // SwiperCore.use([EffectCoverflow]);
+  SwiperCore.use([Autoplay]);
   return(
-    <section className={classesHomePage.sectionHeader} style={{
-      background: `url("${sectionHeader.strapiAboutUsPage.Background_Section_Header[0].url}")`
-    }}>
+    <section style={{background: `url("${sectionHeader.strapiAboutUsPage.Background_Section_Header[0].url}")`}} className={`about-section ${classesHomePage.sectionHeader}`} >
+
+
       <div className={`container row ${classesHomePage.justifyContent}`} style={{
         height: `100%`,
         justifyContent: `center`,

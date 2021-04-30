@@ -17,7 +17,7 @@ const AboutUs = ({ data }) => {
     <Layout>
       <SEO seo={data.strapiAboutUsPage.SEO_About_Us} />
       <SectionHeader />
-      <AboutDoctor />
+      <AboutDoctor maxWidthImage={'679px'} />
       <ListServicesInclude />
       <SectionQuantity />
       <SectionComments />

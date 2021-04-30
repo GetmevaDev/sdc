@@ -15,7 +15,7 @@ export default function SectionSocial() {
                       Link
                       Image {
                           alternativeText
-                          url
+                          url   
                       }
                   }
               }

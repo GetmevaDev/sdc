@@ -82,9 +82,6 @@ const Layout = ({ children }) => {
                             ) : null
 
                         }
-
-
-
                     </li>
                   )) : null
               }

@@ -1,0 +1,102 @@
+@import './src/scss/utils/mixins';
+@import "./src/scss/utils/vars";
+
+
+.form{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.flexStyles{
+  flex-wrap: wrap;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 48px;
+  text-align: center;
+  color: #333333;
+  margin-bottom: 57px;
+}
+
+.form-group{
+flex-basis: 470px;
+flex-grow: 1;
+  margin-bottom: 16px;
+  padding: 0 10px;
+  input{
+    width: 100%;
+    padding: 14px 24px;
+    border: 1px solid #787D88;
+    font-family: $Oxygen-Regular;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    color: #979797;
+  }
+  .form-date::-webkit-calendar-picker-indicator {
+    background: url("../../../images/calendar 2.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+.button-submit{
+  margin-right: 0 !important;
+  margin-left: 85%;
+  display: inline-block;
+  padding: 24px 30px;
+  background: #D7AE5D;
+  color: #fff;
+  border: 1px solid #D7AE5D;
+  transition: .7s;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  &:not(:last-child){
+    margin-right: 17px;
+  }
+  img{
+    right: -8px;
+    transition: .3s;
+  }
+  &:hover{
+
+    transition: .7s;
+    img{
+      right: -15px;
+    }
+  }
+  @include mediaWidth_700{
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  @include mediaWidth_480{
+    font-size: 17px;
+  }
+}
+
+
+.block-warning{
+  margin-top: -60px;
+  @include mediaWidth_900{
+    margin-top: 30px;
+  }
+  img{
+    margin-right: 18px;
+  }
+}
+
+.warning{
+  font-family: $Oxygen-Regular;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #979797;
+  max-width: 668px;
+}

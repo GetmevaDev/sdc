@@ -5,6 +5,25 @@
   @include mediaWidth_700{
     justify-content: flex-end !important;
   }
+  h2{
+    font-family: $PlayfairDisplay-Black;
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 79.12px;
+    margin-bottom: 15px;
+    @include mediaWidth_1366{
+      font-size: 65px;
+      line-height: 79.12px;
+    }
+    @include mediaWidth_1224{
+      font-size: 5.68vmax;
+      line-height: 5.68vmax;
+    }
+    @include mediaWidth_480{
+      font-size: 4.68vmax;
+      line-height: 4.68vmax;
+    }
+  }
 }
 
 .section-header{
@@ -12,25 +31,38 @@
   background-size: cover !important;
   height: calc(100vh - 120.133px);
   margin-top: 120.133px;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(234deg, rgba(0,0,0,0.7007003484987745) 29%, rgba(255,255,255,0) 78%);
+    z-index: 15;
+  }
 @include mediaWidth_700{
   margin-top: 78px;
-  background-position-x: -170px !important;
+  background-position-x: -203px !important;
+  height: 100vh;
 }
-
-
-  .section-header_title,
-  .section-header_subtitle{
+  h2,
+  p{
     color: #fff;
     text-align: right;
+    z-index: 16;
   }
 
   .section-header_title{
-    max-width: 839px;
+    max-width: 587px;
     font-family: $PlayfairDisplay-Black;
     font-weight: 900;
     font-size: 75px;
     line-height: 79.12px;
     margin-bottom: 39px;
+    z-index: 16;
     @include mediaWidth_1366{
       font-size: 65px;
       line-height: 79.12px;
@@ -40,11 +72,51 @@
       line-height: 5.68vmax;
     }
   }
-  .section-header_subtitle{
-    max-width: 739px;
+  p{
     font-family: $PlayfairDisplay-Bold;
     font-weight: 700;
     font-size: 30px;
     line-height: 28px;
+    max-width: 983px;
+    margin-bottom: 32px;
+    @include mediaWidth_480{
+      font-size: 22px;
+      line-height: 23px;
+    }
+  }
+}
+
+.link{
+  margin-top: 50px;
+  display: inline-block;
+  padding: 24px 49px;
+  background: #333333;
+  color: #fff;
+  border: 1px solid #D7AE5D;
+  transition: .7s;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 29px;
+  &:not(:last-child){
+    margin-right: 17px;
+  }
+  img{
+    right: 0;
+    transition: .3s;
+  }
+  &:hover{
+    background: #D7AE5D;
+
+    transition: .7s;
+    img{
+      right: -20px;
+    }
+  }
+  @include mediaWidth_700{
+    width: 100%;
+    text-align: center;
+  }
+  @include mediaWidth_480{
+    font-size: 17px;
   }
 }

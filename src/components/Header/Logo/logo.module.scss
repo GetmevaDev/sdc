@@ -3,13 +3,18 @@
 
 
 .logo-link{
-  display: inline-block;
-  max-width: 256px;
-  max-height: 63px;
+  display: block;
+  max-width: 276px;
+  max-height: 175px;
+  padding: 27px 34px;
+  background: #fff;
+  transform: translateY(27px);
   @include mediaWidth_700{
     max-width: 155px;
+    transform: translateY(0);
   }
   img{
+    display: inline-block;
     max-width: 100%;
   }
 }

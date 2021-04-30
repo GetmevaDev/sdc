@@ -51,7 +51,7 @@ export const query = graphql`
                 Text
                 slug
                 createdAt(formatString: "MMM D Y")
-                category_post {
+                category_article {
                     Name_Category
                 }
                 author {
