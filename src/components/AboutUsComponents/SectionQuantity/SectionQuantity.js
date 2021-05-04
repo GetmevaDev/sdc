@@ -13,10 +13,10 @@ export default function SectionQuantity(){
       {
           strapiAboutUsPage {
               SectionQuantity {
-                  Dentist
+                  Dental_Technicians
                   Happy_Clients
-                  Teeth_Pulled
-                  Instagram_Followers
+                  Crowns_Delivered
+                  Smiles_Created
                   Backgroun_Section {
                       alternativeText
                       url
@@ -41,7 +41,7 @@ export default function SectionQuantity(){
             />
           </div>
           <div>
-            <h2>{data.strapiAboutUsPage.SectionQuantity.Dentist}</h2>
+            <h2>{data.strapiAboutUsPage.SectionQuantity.Dental_Technicians}</h2>
             <h3>Dental Technicians</h3>
           </div>
 
@@ -67,8 +67,8 @@ export default function SectionQuantity(){
             />
           </div>
           <div>
-            <h2>{data.strapiAboutUsPage.SectionQuantity.Teeth_Pulled}</h2>
-            <h3>Teeth Pulled
+            <h2>{data.strapiAboutUsPage.SectionQuantity.Crowns_Delivered}</h2>
+            <h3>Crowns Delivered
             </h3>
           </div>
 
@@ -81,8 +81,8 @@ export default function SectionQuantity(){
             />
           </div>
           <div>
-            <h2>{data.strapiAboutUsPage.SectionQuantity.Instagram_Followers}</h2>
-            <h3>Instagram Followers</h3>
+            <h2>{data.strapiAboutUsPage.SectionQuantity.Smiles_Created}</h2>
+            <h3>Smiles Created</h3>
           </div>
 
         </div>
