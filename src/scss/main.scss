@@ -324,7 +324,7 @@ p {
       right: 24%;
     }
     &:after{
-      content: url("../images/arrow-right.svg");
+      content: "";
       display: inherit;
     }
   }
@@ -342,7 +342,7 @@ p {
       background: #D7AE5D;
     }
     &:after{
-      content: url("../images/arrow-left.svg");
+      content: "";
       display: inherit;
     }
   }

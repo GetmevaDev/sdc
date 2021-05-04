@@ -120,8 +120,13 @@ export default function SectionOurServices(){
                 </SwiperSlide>
               ))
             }
-            <button className={`swiper-button-next`} type={`button`}></button>
-            <button className={`swiper-button-prev`} type={`button`}></button>
+            <button className={`swiper-button-next`} type={`button`}>
+              <img src={ArrowLRight} alt="" />
+
+            </button>
+            <button className={`swiper-button-prev`} type={`button`}>
+              <img src={ArrowLeft} alt="" />
+            </button>
           </Swiper>
         </div>
       </div>
