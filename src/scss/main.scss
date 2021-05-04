@@ -317,12 +317,14 @@ p {
     height: auto !important;
   }
   .swiper-button-next{
+    display: block;
     position: absolute;
     top: 519px;
     right: 44%;
     width: 77px;
     height: 77px;
     background: #333333;
+    z-index: 11;
     &:hover{
       background: #D7AE5D;
     }
@@ -335,12 +337,14 @@ p {
     }
   }
   .swiper-button-prev{
+    display: block;
     position: absolute;
     top: 519px;
     left: 42%;
     width: 77px;
     height: 77px;
     background: #333333;
+    z-index: 11;
     @include mediaWidth_900{
       left: 22%;
     }
