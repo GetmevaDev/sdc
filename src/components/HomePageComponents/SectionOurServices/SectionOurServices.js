@@ -115,7 +115,7 @@ export default function SectionOurServices(){
                     </div>
                     <h4>{item.Title}</h4>
                     <span>{item.Text.substring(0,99)}</span>
-                    <Link className={classes.moreInfo} to={item.slug}>More info</Link>
+                    {/*<Link className={classes.moreInfo} to={item.slug}>More info</Link>*/}
                   </div>
                 </SwiperSlide>
               ))
