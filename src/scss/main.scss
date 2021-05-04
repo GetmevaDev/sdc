@@ -319,7 +319,7 @@ p {
   .swiper-button-next{
     display: block;
     position: absolute;
-    top: 519px;
+    top: 500px;
     right: 44%;
     width: 77px;
     height: 77px;
@@ -333,13 +333,13 @@ p {
     }
     &:after{
       content: "";
-      display: inherit;
+      display: none;
     }
   }
   .swiper-button-prev{
     display: block;
     position: absolute;
-    top: 519px;
+    top: 500px;
     left: 42%;
     width: 77px;
     height: 77px;
@@ -353,7 +353,7 @@ p {
     }
     &:after{
       content: "";
-      display: inherit;
+      display: none;
     }
   }
 }
