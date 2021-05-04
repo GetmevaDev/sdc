@@ -299,3 +299,51 @@ p {
     }
   }
 }
+
+.services-container{
+
+  .swiper-container{
+    height: 576px;
+    margin-bottom: -438px;
+  }
+  .swiper-slide{
+
+    height: auto !important;
+  }
+  .swiper-button-next{
+    position: absolute;
+    top: 519px;
+    right: 44%;
+    width: 77px;
+    height: 77px;
+    background: #333333;
+    &:hover{
+      background: #D7AE5D;
+    }
+    @include mediaWidth_900{
+      right: 24%;
+    }
+    &:after{
+      content: url("../images/arrow-right.svg");
+      display: inherit;
+    }
+  }
+  .swiper-button-prev{
+    position: absolute;
+    top: 519px;
+    left: 42%;
+    width: 77px;
+    height: 77px;
+    background: #333333;
+    @include mediaWidth_900{
+      left: 22%;
+    }
+    &:hover{
+      background: #D7AE5D;
+    }
+    &:after{
+      content: url("../images/arrow-left.svg");
+      display: inherit;
+    }
+  }
+}

@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => (
       <SEO seo={data.strapiHomePage.SEO_Home_Page} />
     <SectionHeader />
     <SectionDescription />
-    {/*<SectionOurServices />*/}
+    <SectionOurServices />
     <SectionComments />
     <SectionNewSpecial />
     <SectionBookAnAppointment />

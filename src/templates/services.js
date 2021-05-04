@@ -17,7 +17,8 @@ const Services = ({ data }) =>{
       {console.log(data)}
         <SectionHeader
         title={data.strapiServices.Title}
-        background={data.strapiServices.Background_Section_Header.Background.length !== 0 ?
+        background={data.strapiServices.Background_Section_Header !== null &&
+          data.strapiServices.Background_Section_Header.Background.length !== 0 ?
           data.strapiServices.Background_Section_Header.Background[0].url : ""}
         />
         <SectionContent

@@ -18,6 +18,9 @@ a{
   line-height: 21.47px;
   letter-spacing: 2px;
   margin-bottom: 7px;
+  span{
+    color: #333333;
+  }
   span:last-child{
     display: none;
   }
@@ -60,7 +63,7 @@ a{
     bottom: 0;
     left: 0;
     display: flex;
-    background: #0c488e;
+    background: #D7AE5D;
     z-index: 10;
     width: 100%;
     justify-content: space-around;

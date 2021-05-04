@@ -26,7 +26,6 @@ export default function NumberPhone(){
             <span><img src={CallIcon} alt={CallIcon} />Call Us</span>
           </a>
           <a className={classes.link} href={appointment}>Book An Appointment</a>
-
     </div>
   )
 }
