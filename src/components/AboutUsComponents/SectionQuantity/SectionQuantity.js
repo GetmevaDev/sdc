@@ -4,7 +4,7 @@ import classes from "./sectionQuantity.module.scss"
 import Image1 from "../../../images/Icon1.png"
 import Image2 from "../../../images/Icon2.png"
 import Image3 from "../../../images/Icon3.png"
-import Image4 from "../../../images/Icon4.png"
+import Image4 from "../../../images/Smile.svg"
 
 
 
@@ -42,7 +42,7 @@ export default function SectionQuantity(){
           </div>
           <div>
             <h2>{data.strapiAboutUsPage.SectionQuantity.Dentist}</h2>
-            <h3>Dentist</h3>
+            <h3>Dental Technicians</h3>
           </div>
 
         </div>
