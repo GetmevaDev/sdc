@@ -278,7 +278,13 @@ p {
         width: 100%;
         background: #EBBD62;
       }
-
+      a{
+        font-family: $Oxygen-Regular;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 28px;
+        color: #333333;
+      }
     }
     em{
       font-family: $Oxygen-Regular;
