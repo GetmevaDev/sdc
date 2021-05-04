@@ -19,8 +19,14 @@ a{
   letter-spacing: 2px;
   margin-bottom: 7px;
   span{
-    color: #333333;
+    color: #fff;
   }
+  @include mediaWidth_700{
+    span{
+      color: #333333;
+    }
+  }
+
   span:last-child{
     display: none;
   }
