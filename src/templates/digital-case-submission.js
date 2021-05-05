@@ -3,11 +3,13 @@ import {graphql} from "gatsby"
 import Layout from "../components/layout"
 import SectionHeader from "../components/DigitalCaseSubmission/SectionHeader/SectionHeader"
 import { ContentBlock } from "../components/DigitalCaseSubmission/ContentBlock/ContentBlock"
+import SEO from "../components/seo"
 
 
 const DigitalCaseSubmission = ({data}) => {
   return(
     <Layout>
+      <SEO seo={data.strapiDigitalCaseSubmissions.SEO_Digital_Case_Submissions} />
         <SectionHeader />
         <ContentBlock
           content={data.strapiDigitalCaseSubmissions}
@@ -27,7 +29,13 @@ export const queryDigitalCaseSubmission = graphql`
             }
             Title
             Text
-            slug
+            slug 
+            SEO_Digital_Case_Submissions {
+                Description
+                Image_Url
+                Title
+            }
+            
         }
         navigation: strapiNavigationStudioAccepted {
             Nav_item {

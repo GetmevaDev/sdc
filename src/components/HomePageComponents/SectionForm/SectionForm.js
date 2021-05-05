@@ -7,37 +7,6 @@ import $ from "jquery"
 
 class SectionForm extends React.Component{
 
-  componentDidMount() {
-
-
-    $(()=>{
-      const $form = $('form');
-      $form.on('submit', function(e){
-        e.preventDefault();
-
-        const $form = $(this);
-        const data = $form.serializeArray();
-
-        const formData = data.reduce((acc, current) => {
-          acc[current.name] = current.value;
-          return acc;
-        }, {})
-
-        $.ajax({
-          type: 'POST',
-          url: 'http://localhost:1337/comments',
-          data: formData
-        }).done(function(){
-          $form[0].reset();
-
-        }).fail(function(){
-          console.log('error');
-        })
-
-      })
-    });
-  }
-
   render(){
 
     return(

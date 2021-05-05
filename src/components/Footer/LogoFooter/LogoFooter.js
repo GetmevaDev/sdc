@@ -8,7 +8,7 @@ const LogoFooter = () =>{
   const data = useStaticQuery(graphql`
       {
           strapiLogo {
-              Site_Logo {
+              Logo_Footer {
                   alternativeText
                   url
               }
@@ -17,7 +17,7 @@ const LogoFooter = () =>{
   `)
   return(
     <div className={classes.logoFooter}>
-      <img src={data.strapiLogo.Site_Logo[0].url} alt={data.strapiLogo.Site_Logo[0].alternativeText} />
+      <img src={data.strapiLogo.Logo_Footer[0].url} alt={data.strapiLogo.Logo_Footer[0].alternativeText} />
     </div>
   )
 }
