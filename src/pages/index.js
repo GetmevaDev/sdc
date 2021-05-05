@@ -16,7 +16,7 @@ import SectionForm from "../components/HomePageComponents/SectionForm/SectionFor
 
 const IndexPage = ({ data }) => (
   <Layout>
-      <SEO seo={data.strapiHomePage.SEO_Home_Page} />
+    <SEO seo={data.strapiHomePage.SEO_Home_Page} />
     <SectionHeader />
     <SectionDescription />
     <SectionOurServices />

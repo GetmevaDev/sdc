@@ -217,10 +217,10 @@ p {
 }
 
 .block-navigation{
-  min-width: 325px;
+flex-grow: 1;
   margin-right: 78px;
   ul{
-    max-width: 325px;
+
     background: #FFFFFF;
     border: 1px solid #DFDFDF;
     padding: 10px;
@@ -239,6 +239,7 @@ p {
 }
 
 .block-content{
+  max-width: 880px;
   .block-image{
     max-width: 210px;
     margin-right: 78px;
@@ -303,6 +304,7 @@ p {
         color: #EBBD62;
       }
     }
+
   }
 }
 
