@@ -18,6 +18,11 @@
   padding-right: 20px;
   border: 1px solid #fff;
   cursor: pointer;
+  transition: 0.7s;
+  &:hover{
+    background: #D7AE5D;
+    transition: 0.7s;
+  }
   img{
     right: 0;
     transition: .3s;

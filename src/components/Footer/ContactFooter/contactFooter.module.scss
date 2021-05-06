@@ -1,20 +1,21 @@
 @import './src/scss/utils/mixins';
 @import "./src/scss/utils/vars";
 
+.social-media{
+  margin-bottom: 25px;
+  a{
+    color: #fff;
+    font-size: 20px;
+  }
+
+
+  li:first-child{
+    margin-left: 20px;
+  }
+}
 .contacts-footer{
   max-width: 280px;
-  .social-media{
-    margin-bottom: 25px;
-    a{
-      color: #fff;
-      font-size: 20px;
-    }
 
-
-    li:first-child{
-      margin-left: 20px;
-    }
-  }
 
   a{
     font-family: $Rubik-Bold;

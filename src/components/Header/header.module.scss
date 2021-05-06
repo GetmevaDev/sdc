@@ -31,7 +31,7 @@
   z-index: 11;
   ul{
     width: 100%;
-    border-left: 5px solid #08B3E3;
+    border-left: 5px solid #EBBD62;
     padding-left: 39px;
     top: 17%;
   }
@@ -47,6 +47,12 @@
     a{
       display: inline;
       font-size: 40px;
+      color: #fff;
+      transition: .6s;
+      &:hover{
+        color: #EBBD62;
+        transition: .6s;
+      }
       @include mediaWidth_700{
         font-size: 30px;
       }

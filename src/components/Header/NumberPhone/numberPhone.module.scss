@@ -13,12 +13,13 @@ a{
 }
 
 .number:first-child{
-  font-family: $Oxygen-Regular !important;
-  font-size: 17px;
-  line-height: 21.47px;
-  letter-spacing: 2px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
   span{
+    font-family: $Oxygen-Regular !important;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 2px;
+    margin-bottom: 7px;
     color: #fff;
   }
   @include mediaWidth_700{
@@ -56,6 +57,12 @@ a{
   line-height: 18.66px;
   padding: 7px 10px;
   border: 1px solid #fff;
+  text-align: center;
+  transition: 0.7s;
+  &:hover{
+    background: #D7AE5D;
+    transition: 0.7s;
+  }
   @include mediaWidth_700{
     border: 0;
 

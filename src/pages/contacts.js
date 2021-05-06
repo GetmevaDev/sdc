@@ -10,7 +10,7 @@ import SEO from "../components/seo"
 const ContactsPage = ({ data }) => {
   return(
     <Layout>
-      <SEO seo={data.seo.SEO_Blog_Page} />
+      <SEO seo={data.seo.SEO_Contact_Page} />
       <SectionHeader
       title={data.pageContact.Title_Page}
       background={data.pageContact.Background_SectionHeader[0].url}

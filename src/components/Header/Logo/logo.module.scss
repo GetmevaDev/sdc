@@ -9,6 +9,7 @@
   padding: 27px 34px;
   background: #fff;
   transform: translateY(27px);
+  z-index: 16;
   @include mediaWidth_700{
     max-width: 155px;
     transform: translateY(0);
