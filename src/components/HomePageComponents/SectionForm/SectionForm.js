@@ -23,7 +23,7 @@ class SectionForm extends React.Component{
             onSubmit="submit"
             className={classes.contactForm}>
             <input type="hidden" name="form-name" value="contact v1" />
-            <div className={classes.formInput}>
+            <div style={{width: `100%`}} className={classes.formInput}>
               <input placeholder={`Your name`} type="text" name="Name" />
             </div>
             <div className={classes.formInput}>
