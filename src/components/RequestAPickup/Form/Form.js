@@ -130,7 +130,13 @@ const nameHandler = (e) =>{
       <div className="container">
           <h2 className={classes.title}>{data.strapiRequestAPickup.Title_Section_Form}</h2>
 
-        <form className={classes.form}>
+        <form
+          name="contact v2"
+          method="post"
+          data-netlify="true"
+          onSubmit="submit"
+          className={classes.form}>
+          <input type="hidden" name="form-name" value="contact v2" />
           <div className={`row ${classes.flexStyles}`}>
 
             <div className={classes.formGroup}>
