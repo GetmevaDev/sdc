@@ -57,14 +57,14 @@ export default function  SectionComments (){
               <div className={`row row-reverse mw1640 ${classesSectionDescription.flexStyles}`}>
                 <div className={classesSectionDescription.imageDescription} >
                   <img
-                    data-aos-delay="1000"
+                    data-aos-delay="200"
                     data-aos="fade-up"
                     src={SectionComment.homPageElement.Section_Comments.Image[0].url}
                     alt={SectionComment.homPageElement.Section_Comments.Image[0].alternativeText}
                   />
                 </div>
 
-                <div data-aos-delay="1000" data-aos="fade-right" className={classesSectionDescription.textContainer} >
+                <div data-aos-delay="200" data-aos="fade-right" className={classesSectionDescription.textContainer} >
                   <div className="hidden" style={{overflow: "hidden", paddingBottom: 50}}>
                     <h2>{SectionComment.homPageElement.Section_Comments.Title}</h2>
                     <h3>{SectionComment.homPageElement.Section_Comments.Subtitle}</h3>

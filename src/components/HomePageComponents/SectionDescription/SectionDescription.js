@@ -35,11 +35,11 @@ export default function SectionDescription(){
         <section  className={classes.sectionDescription} >
           <div className={`row mw1640 ${classes.flexStyles}`}>
             <div className={classes.imageDescription}>
-              <img data-aos-delay="1000" data-aos="fade-up" src={description.strapiHomePage.Description.Image[0].url} alt={description.strapiHomePage.Description.Image[0].alternativeText} />
+              <img data-aos-delay="200" data-aos="fade-up" src={description.strapiHomePage.Description.Image[0].url} alt={description.strapiHomePage.Description.Image[0].alternativeText} />
             </div>
             {
               description.strapiHomePage.Description && description.strapiHomePage.Description !== null ? (
-                  <div data-aos-delay="1000" data-aos="fade-left" className={classes.textContainer}>
+                  <div data-aos-delay="200" data-aos="fade-left" className={classes.textContainer}>
                     <h2>{description.strapiHomePage.Description.Title}</h2>
                     <ReactMarkdown
                       source={description.strapiHomePage.Description.Text}

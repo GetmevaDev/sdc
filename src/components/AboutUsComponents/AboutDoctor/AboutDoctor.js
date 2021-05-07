@@ -34,14 +34,14 @@ export default function AboutDoctor({maxWidthImage}){
           style={{maxWidth: maxWidthImage}}
           className={classesDescription.imageDescription}>
           <img
-            data-aos-delay="1000" data-aos="fade-up"
+            data-aos-delay="200" data-aos="fade-up"
             src={data.strapiAboutUsPage.About_Smile_Design_Center.Photo[0].url}
             alt={data.strapiAboutUsPage.About_Smile_Design_Center.Photo[0].alternativeText}
           />
         </div>
         {
           data.strapiAboutUsPage.About_Smile_Design_Center && data.strapiAboutUsPage.About_Smile_Design_Center !== null ? (
-            <div data-aos-delay="1000" data-aos="fade-left" className={`${classesDescription.textContainer} ${classes.textContainer}`}>
+            <div data-aos-delay="200" data-aos="fade-left" className={`${classesDescription.textContainer} ${classes.textContainer}`}>
               <h2>{data.strapiAboutUsPage.About_Smile_Design_Center.Title}</h2>
               <ReactMarkdown
                 source={data.strapiAboutUsPage.About_Smile_Design_Center.Text}

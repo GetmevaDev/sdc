@@ -27,7 +27,7 @@ export default function ListServicesInclude(){
   return(
     <section style={{paddingTop: 0}}>
       <div className={`container row ${classes.flexStyles}`}>
-        <div data-aos-delay="1000" data-aos="fade-up" className="block-list">
+        <div data-aos-delay="200" data-aos="fade-up" className="block-list">
           <h4>What we do:</h4>
           <ul >
             {
@@ -38,7 +38,7 @@ export default function ListServicesInclude(){
 
           </ul>
         </div>
-        <div data-aos-delay="1200" data-aos="fade-up" className="block-list">
+        <div data-aos-delay="200" data-aos="fade-up" className="block-list">
           <h4>Our Services Include:</h4>
           <ul>
             {

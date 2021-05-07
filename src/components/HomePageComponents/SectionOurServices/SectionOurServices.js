@@ -68,7 +68,7 @@ export default function SectionOurServices(){
   const subtitle = sectionOurServices.strapiHomePage.Section_Our_Services.Subtitle;
 
   return(
-    <section data-aos-delay="1000" data-aos="fade-up" className={classes.sectionOurServices} style={{
+    <section data-aos-delay="200" data-aos="fade-up" className={classes.sectionOurServices} style={{
       background: `url("${background}")`,
       marginBottom: 145,
     }}>

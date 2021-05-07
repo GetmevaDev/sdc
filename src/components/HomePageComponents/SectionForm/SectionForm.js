@@ -1,7 +1,6 @@
 import React from "react"
 import classes from "./sectionForm.module.scss"
 import Arrow from "../../../images/Arrow 1.svg"
-import $ from "jquery"
 
 
 
@@ -17,7 +16,13 @@ class SectionForm extends React.Component{
           <h2 className={classes.sectionTitle}>{this.props.title || 'Feel free to contact us'}</h2>
           <span className={classes.sectionSubtitle}>{this.props.subtitle ||'Please fill out the form below or use our contact information provided.'}</span>
 
-          <form className={classes.contactForm}>
+          <form
+            name="contact v1"
+            method="post"
+            data-netlify="true"
+            onSubmit="submit"
+            className={classes.contactForm}>
+            <input type="hidden" name="form-name" value="contact v1" />
             <div className={classes.formInput}>
               <input placeholder={`Your name`} type="text" name="Name" />
             </div>
@@ -28,7 +33,7 @@ class SectionForm extends React.Component{
               <input placeholder={`Your Phone`} type="tel" name="Phone" />
             </div>
             <div className={`${classes.formInput} textarea`}>
-              <textarea disabled={false} placeholder={`Your Message`} name="Comment" id="" cols="30" rows="10"></textarea>
+              <textarea disabled={false} name={`Message`} placeholder={`Your Message`} name="Comment" id="" cols="30" rows="10"></textarea>
             </div>
 
             <button className={`link`} style={{

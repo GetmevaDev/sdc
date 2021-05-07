@@ -33,11 +33,11 @@ export default function SectionNewSpecial(){
     <section className={classes.sectionSpecial} >
       <div className={`row mw1640 ${classesSectionDescription.flexStyles}`}>
         <div className={classesSectionDescription.imageDescription}>
-          <img data-aos-delay="1000" data-aos="fade-up" src={data.strapiHomePage.Section_Special.Image[0].url} alt={data.strapiHomePage.Section_Special.Image[0].alternativeText} />
+          <img data-aos-delay="200" data-aos="fade-up" src={data.strapiHomePage.Section_Special.Image[0].url} alt={data.strapiHomePage.Section_Special.Image[0].alternativeText} />
         </div>
         {
           data.strapiHomePage.Section_Special && data.strapiHomePage.Section_Special !== null ? (
-            <div data-aos-delay="1000" data-aos="fade-left" className={classesSectionDescription.textContainer}>
+            <div data-aos-delay="200" data-aos="fade-left" className={classesSectionDescription.textContainer}>
               <h2>{data.strapiHomePage.Section_Special.Title}</h2>
               <h3>{data.strapiHomePage.Section_Special.Subtitle}</h3>
               <ReactMarkdown

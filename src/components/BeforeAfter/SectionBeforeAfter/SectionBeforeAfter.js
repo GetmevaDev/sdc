@@ -37,14 +37,14 @@ export default function SectionNewSpecial(){
             <div className={`row mw1640 ${classes.flexStyles} `}>
               <div className={classesSectionDescription.imageDescription}>
                 <img
-                  data-aos-delay="1000" data-aos="fade-up"
+                  data-aos-delay="200" data-aos="fade-up"
                   src={elem.Image.length !== 0 ? elem.Image[0].url : null}
                   alt={elem.Image.length !== 0 ? elem.Image[0].alternativeText : ""}
                 />
               </div>
               {
                 elem && elem !== null ? (
-                  <div className={classesSectionDescription.textContainer}>
+                  <div data-aos-delay="200" data-aos="fade-up" className={classesSectionDescription.textContainer}>
                     <h2>{elem.Title}</h2>
                     <ReactMarkdown
                       source={elem.Text}
