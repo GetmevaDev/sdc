@@ -28,6 +28,7 @@ export function Form (){
   const [dateError, setDateError] = useState(true);
 
   const [formValid, setFormValid] = useState(false);
+  const [handlerValid, setHandlerValid] = useState(false)
 
 
 const blurHandler = (e) => {
@@ -94,6 +95,12 @@ const nameHandler = (e) =>{
     }else{
       setDateError(true);
     }
+  }
+
+
+  const handlerValidation = () => {
+      setHandlerValid(!handlerValid)
+    console.log(handlerValid)
   }
 
 
@@ -170,19 +177,12 @@ const nameHandler = (e) =>{
             </div>
 
           </div>
-          <button disabled={!formValid} className={classes.buttonSubmit} type={`submit`}>Send<img src={Arrow} alt="" /></button>
-          {nameDirty ||
-            addressDirty ||
-            phoneDirty ||
-            pickupDirty ||
-            dateDirty ? <div className={`row ${classes.blockWarning}`}>
+          <button  disabled={!formValid} className={classes.buttonSubmit} type={`submit`}>Send<img src={Arrow} alt=""/></button>
+
+          {formValid ? <div className={`row ${classes.blockWarning}`}>
             <div>
               {
-                nameError ||
-                addressError ||
-                phoneError ||
-                pickupError ||
-                dateError ? <img src={Image2} alt="" /> :
+                !formValid ? <img src={Image2} alt="" /> :
                   <img src={Image1} alt="" />
               }
             </div>
