@@ -37,7 +37,7 @@ export default function Footer(){
           }}>
             <img src={LogoM} alt="" />
             <p>Web Design & Digital Marketing <br/>
-              by <a href="">Robert Gerov Media</a></p>
+              by <a href="https://robertgerov.com">Robert Gerov Media</a></p>
           </div>
         </div>
       </div>
