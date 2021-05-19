@@ -359,3 +359,29 @@ flex-grow: 1;
     }
   }
 }
+
+.manufacturer{
+  justify-content: center;
+  .adaptive-m{
+    @include mediaWidth_480{
+      margin-left: 0 !important;
+    }
+  }
+  img{
+    width: 65px;
+    height: 28px;
+    margin-right: 10px;
+  }
+  p{
+    font-family: $Oxygen-Regular;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    a{
+      display: inline;
+      color: #BCA667;
+    }
+  }
+}
