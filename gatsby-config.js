@@ -13,6 +13,7 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
