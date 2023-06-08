@@ -6,11 +6,19 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        host: "https://ikdentalstudios.com",
+        sitemap: "https://ikdentalstudios.com/sitemap.xml",
+        policy: [{ userAgent: "*", allow: "/" }],
+      },
+    },
+    {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: process.env.DEPLOY_URL
-        ? 'https://cms-ikd.herokuapp.com'
-        : 'http://localhost:1337',
+          ? "https://cms-ikd.herokuapp.com"
+          : "http://localhost:1337",
         queryLimit: 1000, // Default to 100
         contentTypes: [
           `users`,
