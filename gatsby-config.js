@@ -13,7 +13,6 @@ module.exports = {
         policy: [{ userAgent: "*", allow: "/" }],
       },
     },
-    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-strapi`,
       options: {
@@ -54,6 +53,7 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    `gatsby-plugin-sitemap`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-sass`,
